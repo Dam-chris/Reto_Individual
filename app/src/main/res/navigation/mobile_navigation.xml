@@ -3,23 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
-
+    app:startDestination="@id/nav_Inicio">
     <fragment
-        android:id="@+id/nav_home"
-        android:name="com.example.retoindividual.ui.home.HomeFragment"
-        android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
-
+        android:id="@+id/nav_Inicio"
+        android:name="com.example.retoindividual.ui.inicio.FragmentoInicio"
+        android:label="fragmento_inicio_fragment"
+        tools:layout="@layout/fragmento_inicio_fragment" />
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.retoindividual.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
-
+        android:id="@+id/nav_Galeria"
+        android:name="com.example.retoindividual.ui.galeria.FragmentGaleria"
+        android:label="fragment_galeria_fragment"
+        tools:layout="@layout/fragment_galeria_fragment" />
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.retoindividual.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_Mapa"
+        android:name="com.example.retoindividual.ui.mapa.FragmentMapa"
+        android:label="fragment_mapa_fragment"
+        tools:layout="@layout/fragment_mapa_fragment" />
 </navigation>
