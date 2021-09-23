@@ -10,6 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RetoIndividual">
         <activity
+            android:name=".NavigationDrawerActivity"
+            android:exported="true"
+            android:label="@string/title_activity_navigation_drawer"
+            android:theme="@style/Theme.RetoIndividual.NoActionBar" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
