@@ -5,8 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.BaseAdapter;
-import android.widget.ListView;
+
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -14,7 +13,6 @@ import androidx.annotation.Nullable;
 
 import com.example.retoindividual.R;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class CursosAdaptador extends ArrayAdapter
@@ -48,7 +46,9 @@ public class CursosAdaptador extends ArrayAdapter
         LayoutInflater inflater =LayoutInflater.from(context);
         View vista = inflater.inflate(R.layout.lista_cursos_per, parent, false);
         TextView tvCursos = vista.findViewById(R.id.tvCursos);
+
         tvCursos.setText(arrayList.get(position));
+
         return vista;
     }
 }

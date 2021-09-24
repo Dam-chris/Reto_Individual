@@ -27,8 +27,7 @@ public class NavigationDrawerActivity extends AppCompatActivity
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityNavigationDrawerBinding binding;
-    private List<String> arrayCursos = new ArrayList<String>();
-    private ListView lvCursos = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -51,25 +50,6 @@ public class NavigationDrawerActivity extends AppCompatActivity
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
 
-        llenarCursos();
-
-        lvCursos = findViewById(R.id.lvCursos);
-        CursosAdaptador adapter = new CursosAdaptador(this, 0, arrayCursos);
-        lvCursos.setAdapter(adapter);
-
-    }
-
-    private void llenarCursos()
-    {
-        arrayCursos.add("Cursos:");
-        arrayCursos.add("DAM1");
-        arrayCursos.add("DAM2");
-        arrayCursos.add("ASIR1");
-        arrayCursos.add("ASIR2");
-        arrayCursos.add("SMR1");
-        arrayCursos.add("SMR2");
-        arrayCursos.add("GA1");
-        arrayCursos.add("GA2");
     }
 
     @Override

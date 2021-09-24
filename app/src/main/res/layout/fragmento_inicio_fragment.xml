@@ -16,7 +16,17 @@
             android:src="@drawable/logoalmi"
             android:id="@+id/ivAlmi"
             />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/tvTituloCursos"
+            android:textSize="30sp"
+            android:textStyle="bold|italic"
+            android:gravity="center|bottom"
+            />
+
     </LinearLayout>
+
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
