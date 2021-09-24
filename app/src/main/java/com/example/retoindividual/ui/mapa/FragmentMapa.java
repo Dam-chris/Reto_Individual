@@ -27,45 +27,45 @@ import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class FragmentMapa extends Fragment
-{
+import java.util.Objects;
+
+public class FragmentMapa extends Fragment {
 
     private FragmentMapaViewModel mViewModel;
     private GoogleMap googleMap;
     MapView mMapView;
 
-    public static FragmentMapa newInstance()
-    {
+    public static FragmentMapa newInstance() {
         return new FragmentMapa();
     }
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
-                             @Nullable Bundle savedInstanceState)
-    {
+                             @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.location_fragment, container, false);
         mMapView = (MapView) rootView.findViewById(R.id.mapView);
         mMapView.onCreate(savedInstanceState);
 
         mMapView.onResume(); // needed to get the map to display immediately
 
-        try
-        {
+        try {
             MapsInitializer.initialize(getActivity().getApplicationContext());
-        } catch (Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
         }
-
-        mMapView.getMapAsync(new OnMapReadyCallback()
-        {
+        //callback
+        mMapView.getMapAsync(new OnMapReadyCallback() {
             @Override
-            public void onMapReady(GoogleMap mMap)
-            {
+            public void onMapReady(GoogleMap mMap) {
                 googleMap = mMap;
-
-                // For showing a move to my location button
-                if (ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED)
+                LatLng almi = new LatLng(43.27173495557362, -2.948777025177847);
+                googleMap.addMarker(new MarkerOptions().position(almi).title("Centro De Estudios Almi").icon(BitmapDescriptorFactory
+                        .defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
+                // For zooming automatically
+                CameraPosition cameraPosition = new CameraPosition.Builder().target(almi).zoom(12).build();
+                googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+                //para cativar tu localizacion a timepo real
+                /*if (ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED)
                 {
                     // TODO: Consider calling
                     //    ActivityCompat#requestPermissions
@@ -76,16 +76,7 @@ public class FragmentMapa extends Fragment
                     // for ActivityCompat#requestPermissions for more details.
                     return;
                 }
-
-                googleMap.setMyLocationEnabled(true);
-
-                LatLng almi = new LatLng(-2.948777025177847, 43.27173495557362);
-                googleMap.addMarker(new MarkerOptions().position(almi).title("Almi").icon(BitmapDescriptorFactory
-                        .defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
-                // For zooming automatically
-                CameraPosition cameraPosition = new CameraPosition.Builder().target(almi).zoom(12).build();
-                googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
-
+                mMap.setMyLocationEnabled(true);*/
             }
         });
 
