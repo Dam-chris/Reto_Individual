@@ -31,7 +31,6 @@ import java.util.Objects;
 
 public class FragmentMapa extends Fragment {
 
-    private FragmentMapaViewModel mViewModel;
     private GoogleMap googleMap;
     MapView mMapView;
 
@@ -89,29 +88,4 @@ public class FragmentMapa extends Fragment {
         mMapView.onResume();
     }
 
-    @Override
-    public void onPause() {
-        super.onPause();
-        mMapView.onPause();
-    }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        mMapView.onDestroy();
-    }
-
-    @Override
-    public void onLowMemory() {
-        super.onLowMemory();
-        mMapView.onLowMemory();
-    }
-
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState)
-    {
-        super.onActivityCreated(savedInstanceState);
-        mViewModel = new ViewModelProvider(this).get(FragmentMapaViewModel.class);
-        // TODO: Use the ViewModel
-    }
 }

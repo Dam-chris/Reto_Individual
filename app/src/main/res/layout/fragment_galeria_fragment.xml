@@ -3,22 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.galeria.FragmentGaleria">
-
-    <androidx.viewpager.widget.ViewPager
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/pager"
+    tools:context=".ui.galeria.FragmentGaleria"
+    android:orientation="vertical">
+    <com.google.android.material.tabs.TabLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tab_layout1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tab_layout2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-    </androidx.viewpager.widget.ViewPager>
-
+        android:layout_height="wrap_content"
+        android:id="@+id/tlGaleria"/>
+    <androidx.viewpager2.widget.ViewPager2
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/vpGalerias"/>
 </LinearLayout>
