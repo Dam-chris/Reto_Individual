@@ -1,4 +1,4 @@
-package com.example.retoindividual.adaptadores;
+package com.example.retoindividual.recicladores;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -12,7 +12,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.retoindividual.R;
-import com.example.retoindividual.recicladores.RecyclerData;
 
 import java.util.ArrayList;
 
@@ -20,26 +19,26 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 {
 
     private ArrayList<RecyclerData> courseDataArrayList;
-    private Context mcontext;
+    private Context context;
 
-    public RecyclerViewAdapter(ArrayList<RecyclerData> recyclerDataArrayList, Context mcontext)
+    public RecyclerViewAdapter(ArrayList<RecyclerData> recyclerDataArrayList, Context context)
     {
         this.courseDataArrayList = recyclerDataArrayList;
-        this.mcontext = mcontext;
+        this.context = context;
     }
 
     // View Holder Class to handle Recycler View.
     public class RecyclerViewHolder extends RecyclerView.ViewHolder
     {
 
-        private TextView courseTV;
-        private ImageView courseIV;
+        private TextView tvImagenes;
+        private ImageView ivImagenes;
 
         public RecyclerViewHolder(@NonNull View itemView)
         {
             super(itemView);
-            courseTV = itemView.findViewById(R.id.tvNombres);
-            courseIV = itemView.findViewById(R.id.ivImagenes);
+            tvImagenes = itemView.findViewById(R.id.tvNombres);
+            ivImagenes = itemView.findViewById(R.id.ivImagenes);
         }
     }
 
@@ -57,10 +56,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     {
         // Set the data to textview and imageview.
         RecyclerData recyclerData = courseDataArrayList.get(position);
-        holder.courseTV.setText(recyclerData.getTitle());
-        //holder.courseIV.setImageResource(recyclerData.getImgid());
+        holder.tvImagenes.setText(recyclerData.getTitulo());
+        //holder.ivImagenes.setImageResource(recyclerData.getImgid());
         //añadir glide aqui
-        Glide.with(mcontext).load(recyclerData.getImgid()).centerCrop().into(holder.courseIV);
+        Glide.with(context).load(recyclerData.getImg()).centerCrop().into(holder.ivImagenes);
     }
 
     @Override

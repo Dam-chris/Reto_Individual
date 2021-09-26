@@ -8,13 +8,15 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.retoindividual.R;
 import com.example.retoindividual.recicladores.RecyclerData;
-import com.example.retoindividual.adaptadores.RecyclerViewAdapter;
+import com.example.retoindividual.recicladores.RecyclerItemClickListener;
+import com.example.retoindividual.recicladores.RecyclerViewAdapter;
 
 import java.util.ArrayList;
 
@@ -47,7 +49,7 @@ public class Fragmento_Exterior extends Fragment
         recyclerDataArrayList = new ArrayList<>();
 
         // added data to array list
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 20; i++)
         {
             recyclerDataArrayList.add(new RecyclerData("Exterior " + (i + 1), "https://almi.eus/wp-content/uploads/2018/06/logo-Almi.jpg"));
         }
@@ -62,5 +64,23 @@ public class Fragmento_Exterior extends Fragment
         // at last set adapter to recycler view.
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
+
+        //on item click listener del reciclador
+        recyclerView.addOnItemTouchListener(new RecyclerItemClickListener(getContext(), recyclerView, new RecyclerItemClickListener.OnItemClickListener()
+                {
+                    @Override
+                    public void onItemClick(View view, int position)
+                    {
+                        Log.d("galeria", "onItemClick: estoy pinchando en el elemento: " + recyclerDataArrayList.get(position).getTitulo());
+                    }
+
+                    @Override
+                    public void onLongItemClick(View view, int position)
+                    {
+
+                    }
+                })
+        );
     }
+
 }

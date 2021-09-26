@@ -2,32 +2,32 @@ package com.example.retoindividual.recicladores;
 
 public class RecyclerData
 {
-    private String title;
-    private String imgid;
+    private String titulo;
+    private String img;
 
-    public String getTitle()
+    public RecyclerData(String titulo, String img)
     {
-        return title;
+        this.titulo = titulo;
+        this.img = img;
     }
 
-    public void setTitle(String title)
+    public String getTitulo()
     {
-        this.title = title;
+        return titulo;
     }
 
-    public String getImgid()
+    public void setTitle(String titulo)
     {
-        return imgid;
+        this.titulo = titulo;
     }
 
-    public void setImgid(String imgid)
+    public String getImg()
     {
-        this.imgid = imgid;
+        return img;
     }
 
-    public RecyclerData(String title, String imgid)
+    public void setImg(String img)
     {
-        this.title = title;
-        this.imgid = imgid;
+        this.img = img;
     }
 }
