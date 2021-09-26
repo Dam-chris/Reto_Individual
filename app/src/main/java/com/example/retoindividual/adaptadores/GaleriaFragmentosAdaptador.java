@@ -21,10 +21,10 @@ public class GaleriaFragmentosAdaptador extends FragmentStateAdapter
     @Override
     public Fragment createFragment(int position)
     {
-      if (position == 1)
-      {
-          return new Fragmento_Interior();
-      }
+        if (position == 1)
+        {
+            return new Fragmento_Interior();
+        }
         return new Fragmento_Exterior();
     }
 

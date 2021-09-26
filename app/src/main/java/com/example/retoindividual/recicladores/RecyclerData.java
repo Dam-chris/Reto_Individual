@@ -1,4 +1,4 @@
-package com.example.retoindividual;
+package com.example.retoindividual.recicladores;
 
 public class RecyclerData
 {
@@ -10,19 +10,23 @@ public class RecyclerData
         return title;
     }
 
-    public void setTitle(String title) {
+    public void setTitle(String title)
+    {
         this.title = title;
     }
 
-    public String getImgid() {
+    public String getImgid()
+    {
         return imgid;
     }
 
-    public void setImgid(String imgid) {
+    public void setImgid(String imgid)
+    {
         this.imgid = imgid;
     }
 
-    public RecyclerData(String title, String imgid) {
+    public RecyclerData(String title, String imgid)
+    {
         this.title = title;
         this.imgid = imgid;
     }

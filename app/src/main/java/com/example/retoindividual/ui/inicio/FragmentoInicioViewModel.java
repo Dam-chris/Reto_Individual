@@ -11,16 +11,19 @@ public class FragmentoInicioViewModel extends ViewModel
     // TODO: Implement the ViewModel
     private MutableLiveData<List<String>> cursos = null;
     private List<String> listaCursos = new ArrayList<>();
+
     public FragmentoInicioViewModel()
     {
         cursos = new MutableLiveData<List<String>>();
         llenarCursos();
-       cursos.postValue(listaCursos);
+        cursos.postValue(listaCursos);
     }
+
     public MutableLiveData<List<String>> getCursos()
     {
         return cursos;
     }
+
     private void llenarCursos()
     {
         listaCursos.add("DAM1");

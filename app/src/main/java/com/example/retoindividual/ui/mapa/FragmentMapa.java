@@ -29,33 +29,40 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.util.Objects;
 
-public class FragmentMapa extends Fragment {
+public class FragmentMapa extends Fragment
+{
 
     private GoogleMap googleMap;
     MapView mMapView;
 
-    public static FragmentMapa newInstance() {
+    public static FragmentMapa newInstance()
+    {
         return new FragmentMapa();
     }
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
-                             @Nullable Bundle savedInstanceState) {
+                             @Nullable Bundle savedInstanceState)
+    {
         View rootView = inflater.inflate(R.layout.location_fragment, container, false);
         mMapView = (MapView) rootView.findViewById(R.id.mapView);
         mMapView.onCreate(savedInstanceState);
 
         mMapView.onResume(); // needed to get the map to display immediately
 
-        try {
+        try
+        {
             MapsInitializer.initialize(getActivity().getApplicationContext());
-        } catch (Exception e) {
+        } catch (Exception e)
+        {
             e.printStackTrace();
         }
         //callback
-        mMapView.getMapAsync(new OnMapReadyCallback() {
+        mMapView.getMapAsync(new OnMapReadyCallback()
+        {
             @Override
-            public void onMapReady(GoogleMap mMap) {
+            public void onMapReady(GoogleMap mMap)
+            {
                 googleMap = mMap;
                 LatLng almi = new LatLng(43.27173495557362, -2.948777025177847);
                 googleMap.addMarker(new MarkerOptions().position(almi).title("Centro De Estudios Almi").icon(BitmapDescriptorFactory
@@ -83,7 +90,8 @@ public class FragmentMapa extends Fragment {
     }
 
     @Override
-    public void onResume() {
+    public void onResume()
+    {
         super.onResume();
         mMapView.onResume();
     }

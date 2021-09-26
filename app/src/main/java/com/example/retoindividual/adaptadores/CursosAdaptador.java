@@ -19,6 +19,7 @@ public class CursosAdaptador extends ArrayAdapter
 {
     private List<String> arrayList = null;
     private Context context = null;
+
     public CursosAdaptador(@NonNull Context context, int resource, @NonNull List<String> arrayList)
     {
         super(context, resource, arrayList);
@@ -43,7 +44,7 @@ public class CursosAdaptador extends ArrayAdapter
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent)
     {
-        LayoutInflater inflater =LayoutInflater.from(context);
+        LayoutInflater inflater = LayoutInflater.from(context);
         View vista = inflater.inflate(R.layout.lista_cursos_per, parent, false);
         TextView tvCursos = vista.findViewById(R.id.tvCursos);
 

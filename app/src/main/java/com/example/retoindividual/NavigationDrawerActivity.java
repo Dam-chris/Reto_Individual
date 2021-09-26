@@ -56,7 +56,7 @@ public class NavigationDrawerActivity extends AppCompatActivity
     @Override
     public boolean onSupportNavigateUp()
     {
-        NavController navController = Navigation.findNavController( this, R.id.nav_host_fragment_content_navigation_drawer);
+        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_navigation_drawer);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }

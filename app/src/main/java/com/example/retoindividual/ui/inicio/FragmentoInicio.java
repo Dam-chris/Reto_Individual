@@ -26,6 +26,7 @@ public class FragmentoInicio extends Fragment
 
     private FragmentoInicioViewModel mViewModel;
     private ListView lvCursos = null;
+
     public static FragmentoInicio newInstance()
     {
         return new FragmentoInicio();

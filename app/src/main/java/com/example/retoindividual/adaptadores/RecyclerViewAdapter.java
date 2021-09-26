@@ -6,12 +6,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.retoindividual.R;
-import com.example.retoindividual.RecyclerData;
+import com.example.retoindividual.recicladores.RecyclerData;
 
 import java.util.ArrayList;
 
@@ -26,6 +27,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         this.courseDataArrayList = recyclerDataArrayList;
         this.mcontext = mcontext;
     }
+
     // View Holder Class to handle Recycler View.
     public class RecyclerViewHolder extends RecyclerView.ViewHolder
     {
@@ -40,6 +42,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             courseIV = itemView.findViewById(R.id.ivImagenes);
         }
     }
+
     @NonNull
     @Override
     public RecyclerViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)

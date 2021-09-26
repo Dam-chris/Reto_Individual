@@ -1,14 +1,12 @@
 package com.example.retoindividual.ui.galeria;
 
 import androidx.fragment.app.FragmentManager;
-import androidx.lifecycle.ViewModelProvider;
 
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 
@@ -17,9 +15,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.retoindividual.R;
-import com.example.retoindividual.RecyclerData;
+import com.example.retoindividual.recicladores.RecyclerData;
 import com.example.retoindividual.adaptadores.GaleriaFragmentosAdaptador;
-import com.example.retoindividual.adaptadores.RecyclerViewAdapter;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
