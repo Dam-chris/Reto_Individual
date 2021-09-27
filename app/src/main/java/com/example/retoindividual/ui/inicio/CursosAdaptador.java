@@ -1,4 +1,4 @@
-package com.example.retoindividual.adaptadores;
+package com.example.retoindividual.ui.inicio;
 
 import android.content.Context;
 import android.view.LayoutInflater;

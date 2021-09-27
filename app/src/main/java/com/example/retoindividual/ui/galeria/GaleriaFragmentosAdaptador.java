@@ -1,4 +1,4 @@
-package com.example.retoindividual.adaptadores;
+package com.example.retoindividual.ui.galeria;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;

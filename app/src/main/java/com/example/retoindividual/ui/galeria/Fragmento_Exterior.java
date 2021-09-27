@@ -1,5 +1,7 @@
 package com.example.retoindividual.ui.galeria;
 
+import android.app.Dialog;
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -12,7 +14,12 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.widget.ImageView;
+import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+import com.example.retoindividual.DialogGaleria;
 import com.example.retoindividual.R;
 import com.example.retoindividual.recicladores.RecyclerData;
 import com.example.retoindividual.recicladores.RecyclerItemClickListener;
@@ -32,6 +39,16 @@ public class Fragmento_Exterior extends Fragment
 
     private RecyclerView recyclerView;
     private ArrayList<RecyclerData> recyclerDataArrayList;
+    private  ImageView ivGaleria = null;
+    private Context context;
+
+
+    @Override
+    public void onAttach(@NonNull Context context)
+    {
+        super.onAttach(context);
+        this.context = context;
+    }
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
@@ -55,23 +72,28 @@ public class Fragmento_Exterior extends Fragment
         }
 
         // added data from arraylist to adapter class.
-        RecyclerViewAdapter adapter = new RecyclerViewAdapter(recyclerDataArrayList, getContext());
+        RecyclerViewAdapter adapter = new RecyclerViewAdapter(recyclerDataArrayList, context);
 
         // setting grid layout manager to implement grid view.
         // in this method '2' represents number of columns to be displayed in grid view.
-        GridLayoutManager layoutManager = new GridLayoutManager(getContext(), 2);
+        GridLayoutManager layoutManager = new GridLayoutManager(getContext(), 3);
 
         // at last set adapter to recycler view.
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
-
         //on item click listener del reciclador
         recyclerView.addOnItemTouchListener(new RecyclerItemClickListener(getContext(), recyclerView, new RecyclerItemClickListener.OnItemClickListener()
                 {
                     @Override
                     public void onItemClick(View view, int position)
                     {
-                        Log.d("galeria", "onItemClick: estoy pinchando en el elemento: " + recyclerDataArrayList.get(position).getTitulo());
+                        //Log.d("galeria", "onItemClick: estoy pinchando en el elemento: " + recyclerDataArrayList.get(position).getTitulo());
+                        Toast.makeText(context, recyclerDataArrayList.get(position).getTitulo(), Toast.LENGTH_SHORT).show();
+                        Bundle bundle = new Bundle();
+                        bundle.putString("imagen",recyclerDataArrayList.get(position).getImg());
+                        DialogGaleria dialogGaleria = new DialogGaleria();
+                        dialogGaleria.show(requireActivity().getSupportFragmentManager(), "imagen");
+                        dialogGaleria.setArguments(bundle);
                     }
 
                     @Override

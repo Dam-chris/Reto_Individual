@@ -16,9 +16,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.retoindividual.R;
-import com.example.retoindividual.adaptadores.CursosAdaptador;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class FragmentoInicio extends Fragment

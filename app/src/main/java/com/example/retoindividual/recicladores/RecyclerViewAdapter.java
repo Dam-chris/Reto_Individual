@@ -1,11 +1,13 @@
 package com.example.retoindividual.recicladores;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -39,6 +41,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             super(itemView);
             tvImagenes = itemView.findViewById(R.id.tvNombres);
             ivImagenes = itemView.findViewById(R.id.ivImagenes);
+            //otra forma de detectar el elemnto pinchado en el evento mas facil que crearte una clase entera xdd
         }
     }
 
@@ -60,6 +63,16 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         //holder.ivImagenes.setImageResource(recyclerData.getImgid());
         //añadir glide aqui
         Glide.with(context).load(recyclerData.getImg()).centerCrop().into(holder.ivImagenes);
+        //listener para todos los fragmentos creados
+        /*holder.itemView.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                //Toast.makeText(context, recyclerData.getTitulo()+"", Toast.LENGTH_SHORT).show();
+
+            }
+        });*/
     }
 
     @Override

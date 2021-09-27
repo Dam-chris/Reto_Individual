@@ -19,6 +19,8 @@
             android:layout_width="155dp"
             android:layout_height="100dp"
             android:layout_gravity="center"
+            android:scaleType="centerInside"
+            android:adjustViewBounds="true"
             android:src="@mipmap/ic_launcher" />
 
         <TextView

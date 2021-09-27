@@ -1,16 +1,9 @@
 package com.example.retoindividual;
 
 import android.os.Bundle;
-import android.view.View;
-import android.view.Menu;
-import android.widget.GridView;
-import android.widget.ListView;
 
-import com.example.retoindividual.adaptadores.CursosAdaptador;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
-import androidx.fragment.app.FragmentManager;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -19,9 +12,6 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.retoindividual.databinding.ActivityNavigationDrawerBinding;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class NavigationDrawerActivity extends AppCompatActivity
 {

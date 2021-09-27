@@ -16,7 +16,6 @@ import android.view.ViewGroup;
 
 import com.example.retoindividual.R;
 import com.example.retoindividual.recicladores.RecyclerData;
-import com.example.retoindividual.adaptadores.GaleriaFragmentosAdaptador;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
