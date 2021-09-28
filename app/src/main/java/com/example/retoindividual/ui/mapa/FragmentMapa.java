@@ -14,6 +14,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 
 import com.example.retoindividual.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -44,6 +46,9 @@ public class FragmentMapa extends Fragment
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState)
     {
+        Animation animFadeOut = AnimationUtils.loadAnimation(getContext(),R.anim.fade_out);
+        container.startAnimation(animFadeOut);
+
         View rootView = inflater.inflate(R.layout.location_fragment, container, false);
         mMapView = (MapView) rootView.findViewById(R.id.mapView);
         mMapView.onCreate(savedInstanceState);

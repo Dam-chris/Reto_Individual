@@ -5,6 +5,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -51,6 +53,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     {
         // Inflate Layout
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.grid_view_per, parent, false);
+        //animcaion
+        Animation animFadeOut = AnimationUtils.loadAnimation(context,R.anim.fade_out);
+        view.startAnimation(animFadeOut);
         return new RecyclerViewHolder(view);
     }
 
