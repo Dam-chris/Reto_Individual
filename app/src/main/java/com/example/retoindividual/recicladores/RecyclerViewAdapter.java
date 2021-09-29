@@ -53,11 +53,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     {
         // Inflate Layout
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.grid_view_per, parent, false);
-        //animcaion
+        //animacion
         Animation animFadeOut = AnimationUtils.loadAnimation(context,R.anim.fade_out);
         view.startAnimation(animFadeOut);
         return new RecyclerViewHolder(view);
     }
+    
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerViewHolder holder, int position)

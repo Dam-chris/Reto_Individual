@@ -15,6 +15,7 @@ import android.view.Window;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 
+import com.example.retoindividual.login_register.DialogLogin;
 import com.example.retoindividual.ui.inicio.FragmentoInicio;
 import com.google.android.material.navigation.NavigationView;
 
@@ -57,6 +58,9 @@ public class NavigationDrawerActivity extends AppCompatActivity
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_navigation_drawer);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+        DialogLogin dialog = new DialogLogin();
+        dialog.setCancelable(false);
+        dialog.show(getSupportFragmentManager(), "Login");
 
     }
 

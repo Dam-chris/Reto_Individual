@@ -11,9 +11,11 @@
         <entry key="..\:/Users/almi/Desktop/RetoIndividual/app/src/main/res/drawable/side_nav_bar.xml" value="0.22135416666666666" />
         <entry key="..\:/Users/almi/Desktop/RetoIndividual/app/src/main/res/layout/activity_main.xml" value="0.296195652173913" />
         <entry key="..\:/Users/almi/Desktop/RetoIndividual/app/src/main/res/layout/activity_navigation_drawer.xml" value="0.296195652173913" />
+        <entry key="..\:/Users/almi/Desktop/RetoIndividual/app/src/main/res/layout/activity_register.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/almi/Desktop/RetoIndividual/app/src/main/res/layout/app_bar_navigation_drawer.xml" value="0.296195652173913" />
         <entry key="..\:/Users/almi/Desktop/RetoIndividual/app/src/main/res/layout/content_navigation_drawer.xml" value="0.28940217391304346" />
         <entry key="..\:/Users/almi/Desktop/RetoIndividual/app/src/main/res/layout/dialog_galeria.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/almi/Desktop/RetoIndividual/app/src/main/res/layout/fragment_entorno.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/almi/Desktop/RetoIndividual/app/src/main/res/layout/fragment_fragmento__exterior.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/almi/Desktop/RetoIndividual/app/src/main/res/layout/fragment_fragmento__interior.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/almi/Desktop/RetoIndividual/app/src/main/res/layout/fragment_galeria_fragment.xml" value="0.36666666666666664" />
@@ -25,6 +27,7 @@
         <entry key="..\:/Users/almi/Desktop/RetoIndividual/app/src/main/res/layout/grid_view_per.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/almi/Desktop/RetoIndividual/app/src/main/res/layout/lista_cursos_per.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/almi/Desktop/RetoIndividual/app/src/main/res/layout/location_fragment.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/almi/Desktop/RetoIndividual/app/src/main/res/layout/login.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/almi/Desktop/RetoIndividual/app/src/main/res/layout/nav_header_navigation_drawer.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/almi/Desktop/RetoIndividual/app/src/main/res/layout/recycler_view_item.xml" value="0.2015625" />
         <entry key="..\:/Users/almi/Desktop/RetoIndividual/app/src/main/res/layout/recycler_view_item_1.xml" value="0.2015625" />

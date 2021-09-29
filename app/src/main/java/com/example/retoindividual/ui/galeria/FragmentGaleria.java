@@ -50,7 +50,7 @@ public class FragmentGaleria extends Fragment
 
         tabs.addTab(tabs.newTab().setText("Exterior"));
         tabs.addTab(tabs.newTab().setText("Interior"));
-
+        tabs.addTab(tabs.newTab().setText("Entorno"));
         tabs.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener()
         {
             @Override

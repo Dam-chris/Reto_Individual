@@ -25,12 +25,16 @@ public class GaleriaFragmentosAdaptador extends FragmentStateAdapter
         {
             return new Fragmento_Interior();
         }
+        if (position == 2)
+        {
+            return new FragmentEntorno();
+        }
         return new Fragmento_Exterior();
     }
 
     @Override
     public int getItemCount()
     {
-        return 2;
+        return 3;
     }
 }
