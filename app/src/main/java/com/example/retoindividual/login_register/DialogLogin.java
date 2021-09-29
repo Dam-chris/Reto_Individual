@@ -110,7 +110,7 @@ public class DialogLogin extends DialogFragment
                             dismiss();
                         } else
                         {
-                            etUsuario.setText("");
+                            etUsuario.setText("Anguila Explosiva");
                             etPassword.setText("");
                         }
                     }
